@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#dff3e7">
+  <meta name="description" content="Ajude Pipoca a atravessar o jardim, saltando por cima das flores espinhosas!">
+
+  <title>Pipoca: Aventura no Jardim</title>
+
+  <link
+    rel="preload"
+    as="image"
+    href="assets/pipoca-sprites.svg"
+    type="image/svg+xml"
+  >
+
+  <link rel="stylesheet" href="o-modo-jogo.css">
+</head>
+
+<body>
+  <main class="page-shell">
+
+    <div class="loading-screen" id="loadingScreen" role="status" aria-live="polite">
+      <div class="loading-card">
+        <div class="loading-duck" aria-hidden="true">🐤</div>
+        <p class="loading-kicker">PREPARANDO A AVENTURA</p>
+        <h2>Arrumando o jardim...</h2>
+        <div class="loading-track" aria-hidden="true">
+          <span></span>
+        </div>
+        <p class="loading-caption">Pipoca já vai chegar!</p>
+      </div>
+    </div>
+
+    <header class="page-header">
+      <div class="brand-mark" aria-hidden="true">P</div>
+
+      <div class="brand-copy">
+        <p class="eyebrow">UMA AVENTURA DIVERTIDA</p>
+        <h1>Pipoca <span>🐤</span></h1>
+      </div>
+
+      <div class="header-tag">AVENTURA NO JARDIM</div>
+    </header>
+
+    <p class="intro">
+      Ajude Pipoca a explorar o jardim. Pule as flores espinhosas
+      e tente conquistar o maior recorde!
+    </p>
+
+    <section class="game-card" aria-label="Jogo Pipoca: Aventura no Jardim">
+
+      <div class="hud" aria-live="polite">
+
+        <div class="hud-pill">
+          <span class="hud-icon" aria-hidden="true">★</span>
+          <span class="hud-label">PONTOS</span>
+          <strong id="score">0</strong>
+        </div>
+
+        <div class="hud-pill best-pill">
+          <span class="hud-icon" aria-hidden="true">🏆</span>
+          <span class="hud-label">RECORDE</span>
+          <strong id="bestScore">0</strong>
+        </div>
+
+      </div>
+
+      <canvas
+        id="gameCanvas"
+        width="960"
+        height="420"
+        aria-label="Pipoca corre pelo jardim. Pressione espaço, seta para cima ou toque para pular."
+      >
+        Seu navegador não suporta Canvas. Atualize o navegador para jogar.
+      </canvas>
+
+      <div class="game-message" id="gameMessage">
+
+        <div class="message-duck" aria-hidden="true">🐤</div>
+
+        <p class="message-kicker" id="messageKicker">
+          MENU PRINCIPAL
+        </p>
+
+        <h2 id="messageTitle">
+          A aventura vai começar!
+        </h2>
+
+        <p class="message-text" id="messageText">
+          Ajude Pipoca a pular as flores espinhosas e conquistar o maior recorde.
+        </p>
+
+        <button id="actionButton" type="button">
+          Jogar agora
+          <span aria-hidden="true">→</span>
+        </button>
+
+      </div>
+    </section>
+
+    <footer class="game-footer">
+
+      <div class="control-hint">
+        <kbd>ESPAÇO</kbd>
+        <kbd>↑</kbd>
+        <span>ou toque na tela para pular</span>
+      </div>
+
+      <p>Desvie das flores. Colete pontos. Divirta-se!</p>
+
+    </footer>
+
+  </main>
+
+  <script src="o-modo-jogo.js"></script>
+</body>
+</html>
